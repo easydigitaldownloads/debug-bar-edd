@@ -16,7 +16,7 @@ class Debug_Bar_EDD {
 
 	function debug_bar_panels( $panels ) {
 
-		require_once( dirname( __FILE__ ) . '/class-debug-bar-slow-actions-panel.php' );
+		require_once( dirname( __FILE__ ) . '/class-debug-bar-edd-cart-panel.php' );
 		
 		$panel = new Debug_Bar_EDD_Panel( 'EDD Cart' );
 		$panel->set_callback( array( $this, 'panel_callback' ) );
