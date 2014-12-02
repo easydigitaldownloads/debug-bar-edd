@@ -32,6 +32,7 @@ class Debug_Bar_EDD {
 
 		if( $cart_details ) {
 
+			echo '<h3>' . __( 'Cart Items', 'edd_debug_bar' ) . '</h3>';
 			echo '<table style="width:100%;border-collapse: collapse; border-spacing: 0;">';
 
 				echo '<tr>';
@@ -73,6 +74,31 @@ class Debug_Bar_EDD {
 
 				}
 
+			echo '</table>';
+
+			echo '<h3>' . __( 'Cart Totals', 'edd_debug_bar' ) . '</h3>';
+			echo '<table style="width:100%;border-collapse: collapse; border-spacing: 0;">';
+
+				echo '<tr>';
+
+					echo '<th>' . __( 'Subtotal', 'edd_debug_bar' ) . '</th>';
+					echo '<th>' . __( 'Discounts', 'edd_debug_bar' ) . '</th>';
+					echo '<th>' . __( 'Taxes', 'edd_debug_bar' ) . '</th>';
+					echo '<th>' . __( 'Fees', 'edd_debug_bar' ) . '</th>';
+					echo '<th>' . __( 'Total', 'edd_debug_bar' ) . '</th>';
+					
+				echo '</tr>';
+
+				echo '<tr>';
+
+					echo '<td>' . edd_get_cart_subtotal() . '</td>';
+					echo '<td>' . edd_get_cart_discounted_amount() . '</td>';
+					echo '<td>' . edd_get_cart_tax() . '</td>';
+					echo '<td>' . edd_get_cart_fee_total() . '</td>';
+					echo '<td>' . edd_get_cart_total() . '</td>';
+					
+				echo '</tr>';
+			
 			echo '</table>';
 
 		} else {
