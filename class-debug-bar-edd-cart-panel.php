@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) 
     die();
 
-class Debug_Bar_EDD_Panel extends Debug_Bar_Panel {
+class Debug_Bar_EDD_Cart_Panel extends Debug_Bar_Panel {
 
     private $callback;
 
